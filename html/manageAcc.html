@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealBau</title>
+    <link rel="stylesheet" href="../css/manageAcc.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="../css/manageAccResp.css">
+    <script src="../js/auth.js"></script>
+    <script src="../js/logout.js"></script>
+</head>
+<body>
+    <header>
+        <span class="logo">RealBau</span>
+
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+
+            <ul class="menu-nav">
+                <li class="nav-item current">
+                    <a href="../index.html" class="nav-link">
+                        Data Filter</a>
+                </li>
+                <li class="nav-item cc-only">
+                    <a href="./insertExcel.html" class="nav-link">
+                        New Data</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./manageAcc.html" class="nav-link active">
+                        Manage Account</a>
+                </li>
+                <li class="nav-item admin-only">
+                    <a href="./addAcc.html" class="nav-link">Add Account</a>
+                </li>
+                <li class="nav-item admin-only">
+                    <a href="./deleteAccounts.html" class="nav-link">Delete Accounts</a>
+                </li>
+                <li class="nav-item logout">
+                    <a onclick="logout()" class="nav-link">Logout</a>
+                </li>
+            </ul>
+            <div class="userDataMenu">
+                <h3>Error!</h3>
+                <h3></h3>
+                <!-- <p>Created: 13.08.2021</p> -->
+                
+            </div>      
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <form action="https://realbaubackend/manage" method="POST" target="_blank">
+
+            <!-- <h1>UREDI PODATKE</h1> -->
+            <h1 style="color: rgba(0, 0, 0, 0.747);font-weight: 100;"><img style="margin-left:2px;width: 27px; height: 27px;" src="../background/addAcc.png" alt=""> UREDI PODATKE</h1>
+            <hr>
+            <div class="form-group">
+                <label for="fname">Ime</label>
+                <input type="text" id="fname" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label for="fpass">Password</label>
+                <input type="password" id="fpass" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="npass">Novi Password</label>
+                <input type="password" id="npass" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="npassc">Potvrdi Password</label>
+                <input type="password" id="npassc" class="form-control">
+            </div>
+            <div id="pomocni"></div>
+            <!-- <input type="submit" class="btn" value="Potvrdi"> -->
+            <input onclick="manageAcc()" id="btn" type="button" class="btn" name="submit" value="Potvrdi" />
+            <div id="manage-acc-loader" class="ui centered inline loader"></div>
+        </form>
+    </div>
+
+
+    <script src="../js/mAccProba.js"></script>
+    <script>
+        var f = document.getElementById("fpass"),
+            g = document.getElementById("npassc");
+  
+            f.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                g.focus()
+            }
+            });
+            g.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.getElementById("btn").click()
+            }
+            });
+    </script>
+</body>
+</html>

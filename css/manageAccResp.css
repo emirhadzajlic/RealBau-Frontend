@@ -1,0 +1,33 @@
+@media only screen and (max-width: 600px) {
+    .container{
+        margin-top: 90px;
+        width: 95%;
+    }
+    header span{
+        /* top: 9px; */
+        left: 25px;
+    }
+    .menu-btn {
+        right: 30px;
+    }
+    .menu {
+        width: 75%;
+    }
+    .container form .btn{
+        width: 100%;
+        height: 43px;
+        margin-top: 0;
+    }
+    .container form .form-control{
+        height: 43px;
+    }
+    #newKunde{
+        height: 300px!important;
+    }
+    #insertEx{
+        flex-direction: column;
+    }
+    #insertEx input{
+        margin:20px;
+    }
+}

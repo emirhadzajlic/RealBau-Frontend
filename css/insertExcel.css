@@ -1,0 +1,106 @@
+/* #chooseF{
+    padding:5px 10px;
+  background:#00ad2d;
+  border:1px solid #00ad2d;
+  position:relative;
+  color:#fff;
+  border-radius:4px;
+  text-align:center;
+  float:left;
+  cursor:pointer
+}
+#myfile{
+    position: absolute;
+    z-index: 20;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+} */
+#basicData{
+    /* padding:5px 10px; */
+    padding: 10px 20px;
+    font-size: 15px;
+  background:rgb(36, 36, 36);
+  border:1px solid rgb(36, 36, 36);
+  border-radius: 4px;
+  color: white;
+  /* height: 100%; */
+    /* font-size: 15px; */
+    margin-left: 50px;
+    cursor: pointer;
+    /* width: 100%; */
+}
+#newKCont{
+    /* background: chocolate; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    /* font-size:16px; */
+    width: 18%;
+    background: rgb(212, 212, 212);
+    border-radius: 4px;
+    padding: 10px;
+    /* align */
+    /* color: green; */
+}
+#newKCont label{
+    margin-bottom: 5px;
+}
+#newKunde{
+    background-color: rgb(243, 243, 243);
+    /* border-radius: 4px; */
+    box-shadow: 0 8px 16px  rgba(0, 0, 0, .3);
+    margin: auto;
+    /* margin-top: 120px; */
+    margin-bottom: 20px;
+    width: 90vw;
+    height: 200px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    /* position: relative; */
+    /* top: 125%; */
+    margin-top: 8%;
+}
+#newKunde h2{
+    margin-top: 7px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 100; 
+    text-align: center;
+    color: rgba(0, 0, 0, 0.76);
+    font-family: sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+#newKunde h2 img{
+    width: 27px;
+    height: 27px;
+}
+#newKunde hr{
+    width: 95%;
+    margin: 5px auto 20px auto;
+}
+#myfile{
+    /* color:red;    */
+    /* size: 100px; */
+    /* height: 25px; */
+    width: 200px;
+    border-radius: 4px;
+    /* background: green; */
+}
+#insertEx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 20px; */
+    margin-top: 30px;
+}
+#alert{
+    margin-top: 20px;
+    text-align: center;
+    height:10px;
+}

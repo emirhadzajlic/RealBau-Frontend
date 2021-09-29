@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealBau</title>
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/deleteAccounts.css">
+    <link rel="stylesheet" href="../css/mainResponsive.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="../js/auth.js"></script>
+    <script src="../js/logout.js"></script>
+</head>
+<body>
+    <div id="my-modal" class="ui basic modal">
+        <div class="ui icon header">
+          <i class="trash alternate outline icon"></i>
+          Da li ste sigurni da zelite da obrisete nalog?
+        </div>
+        <div class="actions">
+          <div onclick="cancelDelete()" class="ui blue basic cancel inverted button">
+            <i class="remove icon"></i>
+            Ne
+          </div>
+          <div onclick="continueDelete()" class="ui blue ok inverted button">
+            <i class="checkmark icon"></i>
+            Da
+          </div>
+        </div>
+    </div>
+    <div id="main-loader" class="ui active inverted dimmer" style="background-color: rgba(255,255,255,.99);">
+        <div class="ui text loader">Loading</div>
+    </div>
+    <p></p>
+    <header>
+        <span class="logo">RealBau</span>
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="./admin.html" class="nav-link">
+                        Data Filter</a>
+                </li>
+ 
+                <li class="nav-item">
+                    <a href="./manageAcc.html" class="nav-link">
+                        Manage Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./addAcc.html" class="nav-link">Add Account</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="./manageData.html" class="nav-link">Manage Data</a>
+                </li> -->
+                <li class="nav-item current">
+                    <a href="#" class="nav-link active">Delete Acounts</a>
+                </li>
+                <li class="nav-item logout">
+                    <a onclick="logout()" class="nav-link">Logout</a>
+                </li>
+            </ul>
+            <div class="userDataMenu">
+                <h3>Error!</h3>
+                <h3></h3>
+                <!-- <p>Created: 13.08.2021</p> -->
+                
+            </div>  
+            
+        </nav>
+    </header>
+
+    <!-- <button onclick="topFunction()" id="myBtn" title="Top Table"><span class="arrow">></span></button> -->
+
+    <div class="container"> 
+        <table class="accounts-table" id="tblStocks">
+            <thead>
+                <tr>
+                    <th class="fth">Ime</th>
+                    <th>Prezime</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th class="lth">Obrisi</th>
+                </tr>
+            </thead>
+            <tbody id="tablebodylol"></tbody>
+        </table>
+    </div>
+
+    <script>
+        // Select dom items
+        const menuBtn =
+            document.querySelector(".menu-btn");
+ 
+        const menu =
+            document.querySelector(".menu");
+ 
+        const menuNav =
+            document.querySelector(".menu-nav");
+ 
+        // const menuBranding =
+            // document.querySelector(".menu-branding");
+
+        const navItems =
+            document.querySelectorAll(".nav-item");
+ 
+        // Set the initial state of the menu
+        let showMenu = false;
+ 
+        menuBtn.addEventListener("click", toggleMenu);
+ 
+        function toggleMenu() {
+            if (!showMenu) {
+                menuBtn.classList.add("close");
+                menu.classList.add("show");
+                menuNav.classList.add("show");
+                // menuBranding.classList.add("show");
+                navItems.forEach((item) =>
+                    item.classList.add("show"));
+ 
+                // Reset the menu state
+                showMenu = true;
+            } else {
+                menuBtn.classList.remove("close");
+                menu.classList.remove("show");
+                menuNav.classList.remove("show");
+                // menuBranding.classList.remove("show");
+                navItems.forEach((item) =>
+                    item.classList.remove("show"));
+ 
+                // Reset the menu state
+                showMenu = false;
+            }
+        }
+    </script> 
+    <script src="../js/deleteAccounts.js"></script>
+</body>
+
+</html>

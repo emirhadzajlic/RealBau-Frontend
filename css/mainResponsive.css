@@ -1,0 +1,90 @@
+@media only screen and (max-width: 600px) {
+    .container{
+        margin-top: 90px;
+    }
+    header span{
+        /* top: 9px; */
+        left: 25px;
+    }
+    .menu-btn {
+        right: 30px;
+    }
+    .menu {
+        width: 75%;
+    }
+    .styled-table th{
+        font-size: 9px;
+    }
+    .container form .btn{
+        width: 100%;
+        height: 43px;
+    }
+    .moreInpBtn{
+        margin: auto;
+    }
+    .hrr{
+        margin: 25px auto 25px auto;
+    }
+    .filterArrow{
+        bottom: -1px;
+    }
+    .xxx{
+        display: none;
+    }  
+    .styled-table {
+        font-size: 12px;
+    }  
+    .yesIcon{
+        width: 22px;
+        height: 22px;
+    }
+    .noIcon{
+        width: 20px;
+        height: 20px;
+    }
+    .styled-table th{
+        height: 50px;
+    }
+    .styled-table td{
+        height: 50px;
+    }
+    .srow{
+        flex-direction: column;
+    }
+    .erow{
+        /* flex-direction: column; */
+    }
+    .frow{
+        flex-direction: column;
+    }
+    .trow,.horow{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .nrow{
+        width: 100%;
+    }
+    .erow{
+        width: 100%;
+    }
+    .xrow{
+        margin: 10px;
+        width: 100%;
+        flex-direction: row;
+    }
+    .container form .form-control{
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .horrow{
+        display: flex;
+        flex-direction: column;
+    }
+    .accounts-table {
+        font-size: 13px;
+    }
+}
